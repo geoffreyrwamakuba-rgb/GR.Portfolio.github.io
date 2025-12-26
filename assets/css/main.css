@@ -1704,8 +1704,17 @@ input, select, textarea {
 }
 
 
-/* Update logo size */
-/* #header .logo svg {
-  width: 1.75rem;
-  height: 1.75rem;
-} */
+
+@media screen and (max-width: 736px) {
+  #main {
+    align-items: flex-start;
+  }
+
+  #main article {
+    padding-top: 2rem;
+  }
+
+  #main article:before {
+    display: none;
+  }
+}
