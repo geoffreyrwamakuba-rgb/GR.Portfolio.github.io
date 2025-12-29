@@ -4306,127 +4306,78 @@ FOOTER – FORCE LIGHT THEME
   color: #fff !important;
 }
 
-/* 
-=========================
-MOBILE SAFETY PATCH
-========================= */
+/* =========================
+   FINAL MOBILE FIXES
+   ========================= */
 
 @media screen and (max-width: 736px) {
 
-  /* Prevent banner vertical overflow */
+  /* ---------- BANNER ---------- */
   #banner {
-    min-height: unset;
     height: auto;
-    padding: 5em 2em 3em 2em;
+    min-height: unset;
+    padding: 4em 2em 3em 2em;
   }
 
-  /* Reduce flex centering side effects */
-  #banner .inner {
-    margin: 0 auto;
+  #banner h2 {
+    font-size: 1.45rem;
+    letter-spacing: 0.03em;
+    padding: 0;
+    white-space: nowrap;
   }
 
-  /* Stack spotlight content cleanly */
+  /* ---------- PROJECT LAYOUT ---------- */
   #two .spotlight {
     flex-direction: column;
-    padding: 2em 0;
+    padding-top: 1.25em;
+    padding-bottom: 1.5em;
   }
 
+  /* Remove space above FIRST project image */
+  #two .spotlight:first-child {
+    padding-top: 0;
+  }
+
+  #two .spotlight:first-child .image {
+    margin-top: 0;
+  }
+
+  /* Stack content cleanly */
   #two .spotlight .image,
   #two .spotlight .content {
     width: 100%;
   }
 
   #two .spotlight .image {
-    margin-bottom: 1.5em;
-  }
-
-  /* Prevent background banding */
-  .wrapper,
-  .wrapper.alt,
-  .wrapper.style1,
-  .wrapper.alt.style2 {
-    padding-left: 0;
-    padding-right: 0;
-  }
-}
-
-/* 
-=========================
-MOBILE FIXES
-========================= */
-
-@media screen and (max-width: 736px) {
-
-  /* Fix muddy banner */
-  #banner,
-  #banner:before,
-  #banner:after {
-    background: #f8f6f3 !important;
-    opacity: 1 !important;
-  }
-
-  /* Reduce intro text */
-  #one p {
-    font-size: 0.9rem;
-    line-height: 1.6;
-  }
-
-  /* Reduce project text */
-  #two .spotlight p {
-    font-size: 0.9rem;
-    line-height: 1.6;
     margin-bottom: 1.25em;
   }
 
-  /* Tighten footer spacing */
-  #footer {
-    padding-top: 1.5em !important;
-  }
-
-  #footer .icons {
-    margin-top: 0.5em;
-    margin-bottom: 0.75em;
-  }
-
-  #footer .copyright {
-    margin-top: 0;
-  }
-
-}
-
-
-@media screen and (max-width: 736px) {
-
-/* Banner title single line */
-  #banner h2 {
-    font-size: 1.55rem;
-    letter-spacing: 0.04em;
-    /* white-space: nowrap; */
-  }
-
-/* Space above View Project button */
-  #main .actions {
-    margin-top: 2em;
-  }
-}
-
-@media screen and (max-width: 736px) {
-
-  #two .spotlight:first-child .image {
-    margin-top: 0;
-  }
-}
-
-@media screen and (max-width: 736px) {
-
-/* Restore space below project text and above button*/
-  #main article p {
+  /* ---------- TEXT → BUTTON SPACING ---------- */
+  #two .spotlight p {
+    font-size: 0.9rem;
+    line-height: 1.6;
     margin-bottom: 1.4em !important;
   }
 
-}
+  /* Force button to sit below text */
+  #main .actions {
+    display: block;
+    margin-top: 0;
+  }
 
-/* Reduce wrapper padding above footer */
+  /* ---------- REMOVE SPACE BEFORE FOOTER ---------- */
   #two.wrapper {
     padding-bottom: 0 !important;
+  }
+
+  #two .spotlight:last-child {
+    padding-bottom: 0;
+    margin-bottom: 0;
+  }
+
+  #footer {
+    margin-top: 0 !important;
+    padding-top: 1.5em !important;
+  }
+
 }
