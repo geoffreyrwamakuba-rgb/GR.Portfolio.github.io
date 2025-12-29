@@ -4394,4 +4394,19 @@ MOBILE FIXES
 
 }
 
+@media screen and (max-width: 736px) {
+
+  /* Banner title single line */
+  #banner h2 {
+    font-size: 1.55rem;
+    letter-spacing: 0.04em;
+    white-space: nowrap;
+  }
+
+  /* Space above View Project button */
+  #main .actions {
+    margin-top: 1em;
+  }
+
+}
 
