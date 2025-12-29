@@ -4394,19 +4394,39 @@ MOBILE FIXES
 
 }
 
+
 @media screen and (max-width: 736px) {
 
-  /* Banner title single line */
+/* Banner title single line */
   #banner h2 {
     font-size: 1.55rem;
     letter-spacing: 0.04em;
     /* white-space: nowrap; */
   }
 
-  /* Space above View Project button */
+/* Space above View Project button */
   #main .actions {
     margin-top: 2em;
+  }
+}
+
+@media screen and (max-width: 736px) {
+
+  #two .spotlight:first-child .image {
+    margin-top: 0;
+  }
+}
+
+@media screen and (max-width: 736px) {
+
+/* Restore space below project text and above button*/
+  #main article p {
+    margin-bottom: 1.4em !important;
   }
 
 }
 
+/* Reduce wrapper padding above footer */
+  #two.wrapper {
+    padding-bottom: 0 !important;
+}
