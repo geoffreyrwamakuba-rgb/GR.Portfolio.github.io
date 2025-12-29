@@ -4400,7 +4400,7 @@ MOBILE FIXES
   #banner h2 {
     font-size: 1.55rem;
     letter-spacing: 0.04em;
-    white-space: nowrap;
+    /* white-space: nowrap; */
   }
 
   /* Space above View Project button */
