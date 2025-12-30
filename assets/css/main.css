@@ -4628,3 +4628,16 @@ body.is-preload #banner {
     padding-top: 1.5em !important;
   }
 }
+
+/* 
+EXTRA SPACE */
+
+@media screen and (max-width: 736px) {
+  #two .spotlight .actions {
+    margin-bottom: 0.25em;
+  }
+
+  #two .spotlight {
+    padding-bottom: 1.5em;
+  }
+}
