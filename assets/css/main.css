@@ -4522,3 +4522,101 @@ MOBILE FIXES
   }
 }
 
+/* Kill banner overlay permanently */
+#banner::after,
+#banner::before {
+  content: none !important;
+  display: none !important;
+}
+
+@media screen and (max-width: 736px) {
+  #two .spotlight:first-child {
+    padding-top: 0;
+  }
+
+  #two .spotlight:first-child .image {
+    margin-top: 0;
+  }
+}
+
+
+
+/* =====================================================
+   FINAL MOBILE & BANNER STABILITY PATCH
+   Paste at VERY BOTTOM of main.css
+   ===================================================== */
+
+/* ---------- 1. KILL BANNER OVERLAYS (PERMANENT) ---------- */
+#banner::before,
+#banner::after {
+  content: none !important;
+  display: none !important;
+}
+
+/* Ensure banner stays clean on resize */
+#banner {
+  background-color: #f8f6f3 !important;
+}
+
+/* ---------- 2. MOBILE BANNER SIZE CONTROL ---------- */
+@media screen and (max-width: 736px) {
+  #banner {
+    height: auto;
+    min-height: unset;
+    padding: 4.5em 2em 3em 2em;
+  }
+
+  #banner h2 {
+    font-size: 1.45rem;
+    letter-spacing: 0.03em;
+    margin: 0 auto;
+    max-width: 90%;
+  }
+
+  #banner p {
+    font-size: 0.75rem;
+    margin-top: 0.5em;
+  }
+}
+
+/* ---------- 3. FIX PROJECT TEXT + BUTTON WRAPPING ---------- */
+@media screen and (max-width: 736px) {
+
+  #main article p {
+    display: block;
+    margin-bottom: 1.2em !important;
+  }
+
+  #main article .actions {
+    clear: both;
+    margin-top: 0.5em;
+  }
+}
+
+/* ---------- 4. REMOVE SPACE ABOVE FIRST PROJECT IMAGE ---------- */
+@media screen and (max-width: 736px) {
+  #two .spotlight:first-child {
+    padding-top: 0;
+  }
+
+  #two .spotlight:first-child .image {
+    margin-top: 0;
+  }
+}
+
+/* ---------- 5. REMOVE EXTRA SPACE BEFORE FOOTER ---------- */
+@media screen and (max-width: 736px) {
+  #two.wrapper {
+    padding-bottom: 0 !important;
+  }
+
+  #two .spotlight:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+
+  #footer {
+    margin-top: 0;
+    padding-top: 1.5em !important;
+  }
+}
