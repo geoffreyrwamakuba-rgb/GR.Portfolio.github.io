@@ -4358,11 +4358,9 @@ MOBILE FIXES
 @media screen and (max-width: 736px) {
 
   /* Fix muddy banner */
-  #banner,
   #banner:before,
   #banner:after {
-    background: #f8f6f3 !important;
-    opacity: 1 !important;
+    display: none !important;
   }
 
   /* Reduce intro text */
@@ -4393,7 +4391,6 @@ MOBILE FIXES
   }
 
 }
-
 
 @media screen and (max-width: 736px) {
 
@@ -4429,4 +4426,46 @@ MOBILE FIXES
 /* Reduce wrapper padding above footer */
   #two.wrapper {
     padding-bottom: 0 !important;
+}
+
+@media screen and (max-width: 736px) {
+
+  /* Ensure text and button never collide */
+  #main article .content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #main article p {
+    margin-bottom: 1.5em !important;
+  }
+
+  #main .actions {
+    margin-top: 0;
+  }
+}
+
+@media screen and (max-width: 736px) {
+
+  /* Remove space above first project image */
+  #two .spotlight:first-child .image {
+    margin-top: 0 !important;
+  }
+
+  /* Remove space after last project */
+  #two .spotlight:last-child {
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+  }
+
+  /* Remove wrapper padding before footer */
+  #two.wrapper {
+    padding-bottom: 0 !important;
+  }
+
+  /* Tight footer handoff */
+  #footer {
+    margin-top: 0 !important;
+  }
+
 }
