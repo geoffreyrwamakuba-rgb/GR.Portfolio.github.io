@@ -4469,3 +4469,56 @@ MOBILE FIXES
   }
 
 }
+
+@media screen and (max-width: 736px) {
+
+  /* Remove top padding before first project */
+  #two.wrapper.alt.style2 {
+    padding-top: 0 !important;
+  }
+
+  #two.wrapper.alt.style2 > section:first-child {
+    padding-top: 0 !important;
+  }
+}
+
+/* Mobile spacing fix above View Project button (CSS) */
+@media screen and (max-width: 736px) {
+
+  #two .actions {
+    margin-top: 1.2em;
+  }
+
+  #two .actions .button {
+    width: auto;
+  }
+}
+
+/* MOBILE SPACE ABOVE FOOTER */
+@media screen and (max-width: 736px) {
+
+  /* Remove space after last project */
+  #two.wrapper {
+    padding-bottom: 0 !important;
+  }
+
+  /* Tighten footer */
+  #footer {
+    padding-top: 1.5em !important;
+  }
+}
+
+@media screen and (max-width: 736px) {
+
+  #banner {
+    background-color: #f8f6f3;
+    height: auto;
+    padding: 4.5em 2em 3em 2em;
+  }
+
+  #banner:before,
+  #banner:after {
+    display: none;
+  }
+}
+
