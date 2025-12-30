@@ -3695,6 +3695,7 @@ input, select, textarea {
 			-ms-transition-delay: 1.25s;
 			transition-delay: 1.25s;
 			content: '';
+			/* background: #fff; */
 			background: #2e3842;
 			display: block;
 			width: 100%;
@@ -4540,26 +4541,40 @@ MOBILE FIXES
 }
 
 
-
 /* =====================================================
-   FINAL MOBILE & BANNER STABILITY PATCH
-   Paste at VERY BOTTOM of main.css
+   ABSOLUTE FINAL FIX — KILL SPECTRAL BACKGROUND SYSTEM
    ===================================================== */
 
-/* ---------- 1. KILL BANNER OVERLAYS (PERMANENT) ---------- */
+/* 1. Disable global background layer */
+#bg {
+  display: none !important;
+}
+
+/* 2. Remove banner overlays completely */
 #banner::before,
 #banner::after {
   content: none !important;
   display: none !important;
 }
 
-/* Ensure banner stays clean on resize */
+/* 3. Force clean banner background at all widths */
 #banner {
-  background-color: #f8f6f3 !important;
+  background: #f8f6f3 !important;
 }
 
-/* ---------- 2. MOBILE BANNER SIZE CONTROL ---------- */
+/* 4. Neutralize preload fade-in behavior */
+body.is-preload #banner {
+  opacity: 1 !important;
+  transform: none !important;
+}
+
+/* =====================================================
+   MOBILE LAYOUT FIXES
+   ===================================================== */
+
 @media screen and (max-width: 736px) {
+
+  /* Banner sizing */
   #banner {
     height: auto;
     min-height: unset;
@@ -4569,19 +4584,16 @@ MOBILE FIXES
   #banner h2 {
     font-size: 1.45rem;
     letter-spacing: 0.03em;
-    margin: 0 auto;
     max-width: 90%;
+    margin: 0 auto;
   }
 
   #banner p {
     font-size: 0.75rem;
     margin-top: 0.5em;
   }
-}
 
-/* ---------- 3. FIX PROJECT TEXT + BUTTON WRAPPING ---------- */
-@media screen and (max-width: 736px) {
-
+  /* Fix text wrapping around buttons */
   #main article p {
     display: block;
     margin-bottom: 1.2em !important;
@@ -4589,12 +4601,10 @@ MOBILE FIXES
 
   #main article .actions {
     clear: both;
-    margin-top: 0.5em;
+    margin-top: 0.6em;
   }
-}
 
-/* ---------- 4. REMOVE SPACE ABOVE FIRST PROJECT IMAGE ---------- */
-@media screen and (max-width: 736px) {
+  /* Remove space above first project image */
   #two .spotlight:first-child {
     padding-top: 0;
   }
@@ -4602,10 +4612,8 @@ MOBILE FIXES
   #two .spotlight:first-child .image {
     margin-top: 0;
   }
-}
 
-/* ---------- 5. REMOVE EXTRA SPACE BEFORE FOOTER ---------- */
-@media screen and (max-width: 736px) {
+  /* Remove space before footer */
   #two.wrapper {
     padding-bottom: 0 !important;
   }
