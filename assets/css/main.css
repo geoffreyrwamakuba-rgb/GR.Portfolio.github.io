@@ -4641,3 +4641,52 @@ EXTRA SPACE */
     padding-bottom: 1.5em;
   }
 }
+
+/* Kill Spectral background layer */
+#bg {
+  display: none !important;
+}
+
+/* Banner must fully cover viewport */
+#banner {
+  min-height: 100vh;
+  height: 100vh;
+  background: #f8f6f3 !important;
+  color: #0e0807;
+}
+
+/* Remove any banner overlays */
+#banner:before,
+#banner:after {
+  display: none !important;
+}
+
+/* =========================================
+   FORCE FULL LIGHT FIRST SCREEN
+   ========================================= */
+
+/* Ensure page background is light */
+html, body {
+  background: #f8f6f3 !important;
+}
+
+/* Kill Spectral background layer */
+#bg {
+  display: none !important;
+}
+
+/* Banner must fully cover viewport */
+#banner {
+  min-height: 100vh;
+  height: 100vh;
+  background: #f8f6f3 !important;
+  color: #0e0807;
+}
+
+/* Remove any banner overlays */
+#banner:before,
+#banner:after {
+  display: none !important;
+}
+
+
